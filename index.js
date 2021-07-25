@@ -5,6 +5,7 @@ for(let i = 0; i < allButtons.length; i++){
 
         playAudio(allButtons[i].textContent);
         addAnimation(allButtons[i].textContent);
+
     });
 }
 
@@ -66,7 +67,10 @@ break;
 
 function addAnimation(buttonName){
     document.querySelector('.' + buttonName).classList.add('pressed');
+    document.body.style.backgroundColor = 'black';
     setTimeout(function(){
-        document.querySelector('.' + buttonName).classList.remove('pressed')
+        document.querySelector('.' + buttonName).classList.remove('pressed');
+        document.body.style.backgroundColor = '#283149';
     }, 100);
 }
+
